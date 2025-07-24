@@ -2,10 +2,9 @@ async function init() {
   const scanButton = document.getElementById('scan');
   const output = document.getElementById('output');
 
+  // Set up scan button to fetch board items
   scanButton.addEventListener('click', async () => {
-    // Fetch sticky notes, shapes and text items on the board
     const items = await miro.board.get({ type: ['sticky_note', 'shape', 'text'] });
-    // Transform to simple objects to display
     const simple = items.map(item => ({
       id: item.id,
       x: item.x,
@@ -14,6 +13,15 @@ async function init() {
     }));
     output.textContent = JSON.stringify(simple, null, 2);
   });
+
+  // Register icon click event to open the panel
+  await miro.board.ui.on('icon:click', async () => {
+    await miro.board.ui.openPanel({
+      url: 'https://raw.githubusercontent.com/Benitodilorenzo/MiroBoardAgent/main/client/index.html'
+    });
+  });
 }
 
-init();
+miro.onReady(() => {
+  init();
+});

@@ -1,7 +1,6 @@
-appName: Miro Board Agent
+eappName: Miro Board Agent
 sdkVersion: SDK_V2
-sdkUri: http://localhost:3000
-boardPicker:
+sdkUri:  https://raw.githubusercontent.com/Benitodilorenzo/MiroBoardAgent/main/client/index_dev.html
   allowedDomains:
     - localhost
 redirectUris:

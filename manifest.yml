@@ -1,0 +1,17 @@
+appName: Miro Board Agent
+sdkVersion: SDK_V2
+sdkUri: http://localhost:3000
+boardPicker:
+  allowedDomains:
+    - localhost
+redirectUris:
+  - http://localhost:3000/auth/redirect
+redirectUriForSdk: http://localhost:3000/auth/redirect
+scopes:
+  - boards:read
+  - boards:write
+icons:
+  colored: >-
+    <svg viewBox="0 0 24 24" height="48" width="48" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg>
+  outline: >-
+    <svg viewBox="0 0 24 24" height="48" width="48" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/></svg>
